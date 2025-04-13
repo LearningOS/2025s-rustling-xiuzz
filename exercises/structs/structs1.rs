@@ -6,10 +6,11 @@
 // hint.
 
 
+
 struct ColorClassicStruct {
     red: u8,
     green: u8,
-    blue: u8
+    blue: u8,
 }
 
 struct ColorTupleStruct(u8, u8, u8);
@@ -28,7 +29,7 @@ mod tests {
         let green = ColorClassicStruct {
             red: 0,
             green: 255,
-            blue: 0
+            blue: 0,
         };
         assert_eq!(green.red, 0);
         assert_eq!(green.green, 255);
@@ -39,7 +40,7 @@ mod tests {
     fn tuple_structs() {
         // TODO: Instantiate a tuple struct!
         // let green =
-        let green = (0, 255, 0);
+        let green = ColorTupleStruct(0, 255, 0);
         assert_eq!(green.0, 0);
         assert_eq!(green.1, 255);
         assert_eq!(green.2, 0);
